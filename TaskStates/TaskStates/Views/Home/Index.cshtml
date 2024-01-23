@@ -28,7 +28,7 @@
                 <p class="state-link">On Going</p>
             </div>
             <div class="col-sm">
-                <div class="num-circle yellow"><span class="num-text">0</span></div>
+                <div class="num-circle yellow"><span class="num-text">@Model.Where(x => x.Status == "On Going").ToList().Count</span></div>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 <p class="state-link">Completed</p>
             </div>
             <div class="col-sm">
-                <div class="num-circle green"><span class="num-text">0</span></div>
+                <div class="num-circle green"><span class="num-text">@Model.Where(x => x.Status == "Completed").ToList().Count</span></div>
             </div>
         </div>
     </div>
