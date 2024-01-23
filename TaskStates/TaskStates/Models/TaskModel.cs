@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 
 namespace TaskStates.Models
 {
@@ -9,5 +10,6 @@ namespace TaskStates.Models
         public string TaskName { get; set; }
         public string Room { get; set; }
         public string Img { get; set; }
+        public string Status { get; set; }
     }
 }
