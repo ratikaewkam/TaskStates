@@ -1,8 +1,48 @@
-﻿@{
+﻿@model IEnumerable<TaskModel>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<p class="task-header">My Task</p>
+<div class="row task-row">
+    <div class="col-sm">
+        <div class="row task-item-row">
+            <div class="col-sm-1">
+                <div class="circle-color blue"></div>
+            </div>
+            <div class="col-sm-3">
+                <p class="state-link">In Completed</p>
+            </div>
+            <div class="col-sm">
+                <div class="num-circle blue"><span class="num-text">@Model.Where(x => x.Status == "In Completed").ToList().Count</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="row task-item-row">
+            <div class="col-sm-1">
+                <div class="circle-color yellow"></div>
+            </div>
+            <div class="col-sm-3">
+                <p class="state-link">On Going</p>
+            </div>
+            <div class="col-sm">
+                <div class="num-circle yellow"><span class="num-text">0</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="row task-item-row">
+            <div class="col-sm-1">
+                <div class="circle-color green"></div>
+            </div>
+            <div class="col-sm-3">
+                <p class="state-link">Completed</p>
+            </div>
+            <div class="col-sm">
+                <div class="num-circle green"><span class="num-text">0</span></div>
+            </div>
+        </div>
+    </div>
 </div>
