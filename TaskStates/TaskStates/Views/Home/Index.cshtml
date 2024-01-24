@@ -12,10 +12,10 @@
                 <div class="circle-color blue"></div>
             </div>
             <div class="col-sm-3">
-                <p class="state-link">In Completed</p>
+                <p class="state-link">Incomplete</p>
             </div>
             <div class="col-sm">
-                <div class="num-circle blue"><span class="num-text">@Model.Where(x => x.Status == "In Completed").ToList().Count</span></div>
+                <div class="num-circle blue"><span class="num-text">@Model.Where(x => x.Status == "Incomplete").ToList().Count</span></div>
             </div>
         </div>
     </div>
@@ -25,10 +25,10 @@
                 <div class="circle-color yellow"></div>
             </div>
             <div class="col-sm-3">
-                <p class="state-link">On Going</p>
+                <p class="state-link">In progress</p>
             </div>
             <div class="col-sm">
-                <div class="num-circle yellow"><span class="num-text">@Model.Where(x => x.Status == "On Going").ToList().Count</span></div>
+                <div class="num-circle yellow"><span class="num-text">@Model.Where(x => x.Status == "In progress").ToList().Count</span></div>
             </div>
         </div>
     </div>
@@ -38,10 +38,10 @@
                 <div class="circle-color green"></div>
             </div>
             <div class="col-sm-3">
-                <p class="state-link">Completed</p>
+                <p class="state-link">Complete</p>
             </div>
             <div class="col-sm">
-                <div class="num-circle green"><span class="num-text">@Model.Where(x => x.Status == "Completed").ToList().Count</span></div>
+                <div class="num-circle green"><span class="num-text">@Model.Where(x => x.Status == "Complete").ToList().Count</span></div>
             </div>
         </div>
     </div>
