@@ -5,25 +5,27 @@
     ViewData["Title"] = "Roles Management";
 }
 
-<h1> View Roles</h1>
-<p>
-    <a asp-action="Create">Add Role</a>
-</p>
-<table class="table" width="100%">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.Id)</th>
-
-            <th>@Html.DisplayNameFor(model => model.Name)</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="view-roles">
+    <h1> View Roles</h1>
+    <p>
+        <a asp-action="Create" style="color: #3FA7D6;">Add Role</a>
+    </p>
+    <table class="table" width="100%">
+        <thead>
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.Id)</td>
-                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <th>@Html.DisplayNameFor(model => model.Id)</th>
+
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
