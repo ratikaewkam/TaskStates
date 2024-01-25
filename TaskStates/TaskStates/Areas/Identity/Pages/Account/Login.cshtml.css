@@ -1,0 +1,25 @@
+﻿.login-row {
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.card {
+    border-radius: 25px;
+    border-color: #FFFFFF;
+}
+
+.login-header {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 50px;
+    padding-left: 40px;
+    color: #2F2E41;
+}
+
+.form-floating {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
