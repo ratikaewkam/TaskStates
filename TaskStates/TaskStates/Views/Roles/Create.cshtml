@@ -1,18 +1,18 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @model IdentityRole
 
-<div class="row">
+<div class="row create-role-row">
     <div class="col-md-4">
         <form method="post">
             <h2> Create Role</h2>
             <hr />
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-floating table-responsive">
-                <input asp-for="Name" class="form-control" aria-required="true" />
+                <input asp-for="Name" class="form-control" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
                 <label asp-for="Name"></label>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary" style="border-radius: 7px; background-color: #3FA7D6; color: #FFFFFF; border-color: #3FA7D6">Save</button>
         </form>
     </div>
 </div>
