@@ -8,7 +8,10 @@
     <div class="col-sm-5">
         <div class="card">
             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                <p class="welcome-header">Create user</p>
+                <p class="register-header">Create user</p>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <hr style="width: 88%;"/>
+                </div>
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
                 <div class="form-floating mb-3">
                     <input asp-for="Input.DisplayName" class="form-control" autocomplete="display-name" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
@@ -36,8 +39,8 @@
                     </select>
                     <span asp-validation-for="Input.Role" class="text-danger"></span>
                 </div>
-                <div class="submit-btn" style="padding-left: 40px; padding-right: 40px; padding-top: 20px; padding-bottom: 20px;">
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg" style="border-radius: 7px; background-color: #3FA7D6; color: #FFFFFF;">Register</button>
+                <div style="padding-left: 40px; padding-right: 40px; padding-top: 20px; padding-bottom: 20px;">
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg" style="border-radius: 7px; background-color: #3FA7D6; color: #FFFFFF; border-color: #3FA7D6">Register</button>
                 </div>
             </form>
         </div>
