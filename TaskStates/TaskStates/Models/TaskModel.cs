@@ -10,7 +10,7 @@ namespace TaskStates.Models
         public string TaskName { get; set; }
         public string Room { get; set; }
         public string Img { get; set; }
-        public string Status { get; set; }
+        public string State { get; set; }
         public DateTime Date { get; set; }
     }
 }
