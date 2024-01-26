@@ -63,3 +63,23 @@
 .task-item-row {
     margin-top: 20px;
 }
+
+.float-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 5%;
+    bottom: 12%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3FA7D6;
+    color: #FFFFFF;
+}
+
+.create-text {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
