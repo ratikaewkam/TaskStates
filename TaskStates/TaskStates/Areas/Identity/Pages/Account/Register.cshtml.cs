@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
@@ -78,7 +78,7 @@ namespace TaskStates.Areas.Identity.Pages.Account
         {
             [Required]
             [Display(Name = "Name")]
-            public string DisplayName { get; set;}
+            public string DisplayName { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used

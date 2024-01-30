@@ -83,3 +83,51 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.list-item {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.col-item {
+    margin-bottom: 50px;
+}
+
+.card {
+    border-radius: 7px;
+    border-color: #FFFFFF;
+    width: 320px;
+}
+
+.card-img-top {
+    border-radius: 7px 7px 0px 0px;
+}
+
+.state {
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #DE1A1A;
+    border-color: #DE1A1A;
+    color: #FFFFFF;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
+
+.btn-success {
+    background-color: #59CD90;
+    border-color: #59CD90;
+    color: #FFFFFF;
+    border-radius: 7px;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}

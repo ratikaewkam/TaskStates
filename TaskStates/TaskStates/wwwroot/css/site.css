@@ -1,11 +1,13 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    color: #2F2E41;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        color: #2F2E41;
+    }
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {

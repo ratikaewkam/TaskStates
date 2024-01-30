@@ -1,0 +1,33 @@
+﻿@model TaskStates.ViewModels.CreateViewModel;
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="form-card">
+    <div class="card">
+        <form method="post" asp-action="Create" enctype="multipart/form-data">
+            <div class="image-cover">
+                <div class="form-group mb-3">
+                    <input asp-for="Img" class="form-control" aria-required="true" style="background-color: none;" />
+                    <span asp-validation-for="Img" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="TaskName" class="form-control" autocomplete="title" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
+                    <label asp-for="TaskName" style="padding-left: 40px; color: #2F2E41;">Title</label>
+                    <span asp-validation-for="TaskName" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Room" class="form-control" autocomplete="Room" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
+                    <label asp-for="Room" style="padding-left: 40px; color: #2F2E41;">Room</label>
+                    <span asp-validation-for="Room" class="text-danger"></span>
+                </div>
+                <div style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+                    <button type="submit" class="w-100 btn btn-lg" style="border-radius: 7px; background-color: #3FA7D6; color: #FFFFFF; border-color: #3FA7D6">Create</button>
+                </div>
+        </form>
+    </div>
+</div>

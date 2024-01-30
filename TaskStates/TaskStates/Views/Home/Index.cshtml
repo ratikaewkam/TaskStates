@@ -46,6 +46,35 @@
         </div>
     </div>
 </div>
-<div class="float-btn">
-    <p class="create-text">+</p>
+<div class="row list-item">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4 col-item">
+            <div class="card">
+                <img src="~/temp/@item.Img" class="card-img-top" style="max-height: 250px;">
+                <div class="card-body">
+                    <h5 class="title">@item.TaskName</h5>
+                    <p class="room">Room: @item.Room <br /> @item.Date</p>
+                    <p class="state">@item.State</p>
+                </div>
+                <div class="row" style="margin-left: 2px; margin-bottom: 20px;">
+                    <div class="col-sm-6">
+                        <a asp-controller="Tasks" asp-action="Delete" asp-route-id="@item.Id">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a asp-controller="Tasks" asp-action="Edit" asp-route-id="@item.Id">
+                            <button type="button" class="btn btn-success">Edit</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
 </div>
+<a asp-controller="Tasks" asp-action="Create">
+    <div class="float-btn">
+        <p class="create-text">+</p>
+    </div>
+</a>

@@ -11,6 +11,6 @@ namespace TaskStates.Models
         public string Room { get; set; }
         public string Img { get; set; }
         public string State { get; set; }
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }

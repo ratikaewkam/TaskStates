@@ -1,0 +1,38 @@
+﻿.form-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    width: 500px;
+    border-radius: 25px;
+}
+
+.image-cover {
+    width: 100%;
+    height: 200px;
+    background-image: url("https://raw.githubusercontent.com/ratikaewkam/TaskStates/dev/TaskStates/TaskStates/wwwroot/img/camera.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px 25px 0px 0px;
+}
+.card-body {
+    margin-top: 20px;
+}
+
+.form-floating {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    width: 90px;
+}
