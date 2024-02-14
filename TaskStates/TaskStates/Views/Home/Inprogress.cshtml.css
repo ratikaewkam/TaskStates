@@ -1,0 +1,133 @@
+﻿.task-header {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 50px;
+    font-weight: bold;
+}
+
+.task-row {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.circle-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.circle-color.blue {
+    background-color: #3FA7D6;
+}
+
+.circle-color.yellow {
+    background-color: #FFE74C;
+}
+
+.circle-color.green {
+    background-color: #59CD90;
+}
+
+.state-link {
+    margin-top: 15px;
+}
+
+.num-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.num-circle.blue {
+    background-color: #3FA7D6;
+}
+
+.num-circle.yellow {
+    background-color: #FFE74C;
+}
+
+.num-circle.green {
+    background-color: #59CD90;
+}
+
+.num-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.task-item-row {
+    margin-top: 20px;
+}
+
+.float-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 5%;
+    bottom: 12%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3FA7D6;
+    color: #FFFFFF;
+}
+
+.create-text {
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-item {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.col-item {
+    margin-bottom: 50px;
+}
+
+.card {
+    border-radius: 7px;
+    border-color: #FFFFFF;
+    width: 320px;
+}
+
+.card-img-top {
+    border-radius: 7px 7px 0px 0px;
+}
+
+.state {
+    font-weight: bold;
+}
+
+.btn-danger {
+    background-color: #DE1A1A;
+    border-color: #DE1A1A;
+    color: #FFFFFF;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 20px;
+}
+
+.btn-success {
+    background-color: #59CD90;
+    border-color: #59CD90;
+    color: #FFFFFF;
+    border-radius: 7px;
+    border-radius: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}

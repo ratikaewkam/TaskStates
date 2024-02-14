@@ -22,9 +22,22 @@ namespace TaskStates.Controllers
             return View(items);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Incomplete()
         {
-            return View();
+            var items = _db.Tasks.Where(x => x.State == "Incomplete").ToList();
+            return View(items);
+        }
+
+        public IActionResult InProgress()
+        {
+            var items = _db.Tasks.Where(x => x.State == "In progress").ToList();
+            return View(items);
+        }
+
+        public IActionResult Complete()
+        {
+            var items = _db.Tasks.Where(x => x.State == "Complete").ToList();
+            return View(items);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

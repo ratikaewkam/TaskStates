@@ -59,34 +59,51 @@ namespace TaskStates.Controllers
                 return NotFound();
             }
 
-            return View();
+            return View(taskFromDB);
         }
 
         [HttpPost]
-        public IActionResult Edit(TaskViewModel vm)
-        { 
-            string img = Upload(vm);
-            var obj = new TaskModel
-            {
-                TaskName = vm.TaskName,
-                Room = vm.Room,
-                State = vm.State,
-                Img = img
-            };
-
+        public IActionResult Edit(TaskModel obj)
+        {
             if (ModelState.IsValid)
             {
                 _db.Tasks.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
-
-            return View();
+            return View(obj);
         }
 
-        public IActionResult Delete()
+        public IActionResult Delete(int? id)
         {
-            return View();
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            var taskFromDB = _db.Tasks.Find(id);
+
+            if (taskFromDB == null)
+            {
+                return NotFound();
+            }
+
+            return View(taskFromDB);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteTask(int? id)
+        {
+            var obj = _db.Tasks.Find(id);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _db.Tasks.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
 
         private string Upload(CreateViewModel vm)

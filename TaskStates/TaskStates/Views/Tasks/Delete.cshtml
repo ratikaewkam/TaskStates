@@ -1,5 +1,41 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model TaskStates.Models.TaskModel;
+
 @{
+    ViewData["Title"] = "Delete";
 }
+
+<div class="form-card">
+    <div class="card">
+        <form method="post" asp-action="DeleteTask">
+            <input asp-for="Id" hidden />
+            <div class="card-body">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Img" class="form-control" disabled autocomplete="title" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
+                    <label asp-for="Img" style="padding-left: 40px; color: #2F2E41;">Image</label>
+                    <span asp-validation-for="Img" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="TaskName" class="form-control" disabled autocomplete="title" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
+                    <label asp-for="TaskName" style="padding-left: 40px; color: #2F2E41;">Title</label>
+                    <span asp-validation-for="TaskName" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Room" class="form-control" disabled autocomplete="Room" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
+                    <label asp-for="Room" style="padding-left: 40px; color: #2F2E41;">Room</label>
+                    <span asp-validation-for="Room" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style="padding-left: 20px; padding-right: 20px;">
+                    <select disabled class="form-select" id="inputGroupSelect01" asp-for="State" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px; ">
+                        <option value="Incomplete">Incomplete</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Complete">Complete</option>
+                    </select>
+                </div>
+                <div style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+                    <button type="submit" class="w-100 btn btn-lg" style="border-radius: 7px; background-color: #DE1A1A; color: #FFFFFF; border-color: #DE1A1A">Delete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

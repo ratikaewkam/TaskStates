@@ -1,20 +1,19 @@
-﻿@model TaskStates.ViewModels.CreateViewModel;
+﻿@model TaskStates.Models.TaskModel;
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
 <div class="form-card">
     <div class="card">
-        <form method="post" asp-action="Create" enctype="multipart/form-data">
-            <div class="image-cover">
-                <div class="form-group mb-3">
-                    <input asp-for="Img" class="form-control" aria-required="true" style="background-color: none;" />
-                    <span asp-validation-for="Img" class="text-danger"></span>
-                </div>
-            </div>
+        <form method="post" asp-action="Edit">
             <div class="card-body">
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="form-floating mb-3">
+                    <input asp-for="Img" class="form-control" readonly autocomplete="title" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
+                    <label asp-for="Img" style="padding-left: 40px; color: #2F2E41;">Image</label>
+                    <span asp-validation-for="Img" class="text-danger"></span>
+                </div>
                 <div class="form-floating mb-3">
                     <input asp-for="TaskName" class="form-control" autocomplete="title" aria-required="true" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px;" />
                     <label asp-for="TaskName" style="padding-left: 40px; color: #2F2E41;">Title</label>
@@ -25,9 +24,17 @@
                     <label asp-for="Room" style="padding-left: 40px; color: #2F2E41;">Room</label>
                     <span asp-validation-for="Room" class="text-danger"></span>
                 </div>
-                <div style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
-                    <button type="submit" class="w-100 btn btn-lg" style="border-radius: 7px; background-color: #3FA7D6; color: #FFFFFF; border-color: #3FA7D6">Create</button>
+                <div class="input-group mb-3" style="padding-left: 20px; padding-right: 20px;">
+                    <select class="form-select" id="inputGroupSelect01" asp-for="State" style="background-color: #EEEFF5; border-color: #EEEFF5; height: 60px; border-radius: 7px; ">
+                        <option value="Incomplete">Incomplete</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Complete">Complete</option>
+                    </select>
                 </div>
+                <div style="padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+                    <button type="submit" class="w-100 btn btn-lg" style="border-radius: 7px; background-color: #59CD90; color: #FFFFFF; border-color: #59CD90">Edit</button>
+                </div>
+            </div>
         </form>
     </div>
 </div>

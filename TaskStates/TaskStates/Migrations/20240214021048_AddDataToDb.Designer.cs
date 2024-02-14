@@ -12,7 +12,7 @@ using TaskStates.Data;
 namespace TaskStates.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240130110754_AddDataToDb")]
+    [Migration("20240214021048_AddDataToDb")]
     partial class AddDataToDb
     {
         /// <inheritdoc />
