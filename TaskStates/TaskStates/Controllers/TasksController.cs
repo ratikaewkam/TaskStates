@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using TaskStates.Data;
@@ -12,12 +13,13 @@ namespace TaskStates.Controllers
         private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public TasksController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment) 
-        {  
+        public TasksController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment)
+        {
             _db = db;
             _webHostEnvironment = webHostEnvironment;
         }
 
+        [Authorize(Roles = "Teacher, Admin")]
         public IActionResult Create()
         {
             return View();
@@ -45,6 +47,7 @@ namespace TaskStates.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Manager, Admin")]
         public IActionResult Edit(int? id) 
         {
             if (id == null || id == 0)
@@ -74,6 +77,7 @@ namespace TaskStates.Controllers
             return View(obj);
         }
 
+        [Authorize(Roles = "Manager, Admin")]
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
