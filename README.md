@@ -51,7 +51,7 @@ PM> Install-Package Microsoft.VisualStudio.Web.CodeGeneration.Design -Version 7.
 ```
 
 ## Setup Database
-```
+```cmd
 PM> update-datebase
 ```
 
