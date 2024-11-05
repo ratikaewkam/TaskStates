@@ -19,7 +19,7 @@ namespace TaskStates.Controllers
             _webHostEnvironment = webHostEnvironment;
         }
 
-        [Authorize(Roles = "Teacher, Admin")]
+        [Authorize(Roles = "teacher, admin")]
         public IActionResult Create()
         {
             return View();
@@ -47,7 +47,7 @@ namespace TaskStates.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Manager, Admin")]
+        [Authorize(Roles = "manager, admin")]
         public IActionResult Edit(int? id) 
         {
             if (id == null || id == 0)
@@ -77,7 +77,7 @@ namespace TaskStates.Controllers
             return View(obj);
         }
 
-        [Authorize(Roles = "Manager, Admin")]
+        [Authorize(Roles = "manager, admin")]
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0)
